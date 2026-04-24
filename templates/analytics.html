@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPDBMS Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+    <div class="logo">HPDBMS</div>
+    
+    <div class="links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('patients') }}">Patients</a>
+        <a href="{{ url_for('appointments') }}">Appointments</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="/">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h2>Analytics Dashboard</h2>
+
+<p>Total Patients: {{ patient_count }}</p>
+<p>Total Appointments: {{ appointment_count }}</p>
+
+<h3>Appointment Calendar</h3>
+
+<div id="calendar"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const events = JSON.parse('{{ events | tojson | safe }}');
+
+    const calendarEl = document.getElementById('calendar');
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        height: 500,
+        events: events
+    });
+
+    calendar.render();
+});
+</script>
+
+</div>
+</body>
+</html>

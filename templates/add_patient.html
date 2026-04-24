@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPDBMS Add Patient</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="topnav">
+    <div class="logo">HPDBMS</div>
+    <div class="links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('patients') }}">Patients</a>
+        <a href="{{ url_for('appointments') }}">Appointments</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="/">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h2>Add Patient</h2>
+
+<form method="POST" action="/add_patient">
+  <input name="first_name" placeholder="First Name" required>
+  <input name="last_name" placeholder="Last Name" required>
+  <input name="phone" placeholder="Phone">
+  <input name="email" placeholder="Email">
+  <button>Add Patient</button>
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>HPDBMS Edit Appointment</title>
+    </head>
+    <body>
+        <div class="topnav">
+    <div class="logo">HPDBMS</div>
+    
+    <div class="links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('patients') }}">Patients</a>
+        <a href="{{ url_for('appointments') }}">Appointments</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="/">Logout</a>
+    </div>
+</div>
+        <h2>Edit Appointment</h2>
+<form method="POST">
+  <input name="patient_name" value="{{ appt.patient_name }}">
+  <input type="date" name="date" value="{{ appt.date }}">
+  <input type="time" name="time" value="{{ appt.time }}">
+  <button>Update</button>
+</form>
+    </body>
+</html>

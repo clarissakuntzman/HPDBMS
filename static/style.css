@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebf0ed;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #34495e;
+}
+
+/* Containers */
+.container {
+    max-width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Forms */
+form {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #6dbe98;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a8168;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf0f1;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Links */
+a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #21493d;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard link */
+.nav {
+    margin-bottom: 20px;
+}
+
+.nav a {
+    margin-right: 15px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Analytics chart */
+canvas {
+    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Navigation Bar */
+.topnav {
+    background-color: #345e4a;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.topnav .logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.topnav .links a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #6dbe98;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Login Page */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;   /* move up instead of center */
+    padding-top: 80px;         /* controls how high it sits */
+}
+
+.login-box {
+    background: linear-gradient(135deg, #bbe6d2, #508b70);
+    padding: 40px;          /* more space inside */
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    width: 400px;           /* bigger width */
+    text-align: center;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;          /* bigger input fields */
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.login-box button {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    
+}
+
+.login-box button:hover {
+    background-color: #d4d8d7;
+}
+
+.login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#calendar {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

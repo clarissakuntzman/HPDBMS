@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HPDBMS Patients</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="topnav">
+    <div class="logo">HPDBMS</div>
+    <div class="links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('patients') }}">Patients</a>
+        <a href="{{ url_for('appointments') }}">Appointments</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="/">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h2>Patients</h2>
+
+<a href="{{ url_for('add_patient_page') }}">
+  <button>Add New Patient</button>
+</a>
+
+<table>
+  <tr>
+    <th>Patient ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+
+  {% for p in patients %}
+  <tr>
+    <td>{{ p.patient_id }}</td>
+    <td>{{ p.first_name }}</td>
+    <td>{{ p.last_name }}</td>
+    <td>{{ p.phone }}</td>
+    <td>{{ p.email }}</td>
+    <td>
+      {% if role == 'admin' %}
+        <a href="/edit_patient/{{ p.id }}">Edit</a>
+        <a href="/delete_patient/{{ p.id }}">Delete</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</div>
+</body>
+</html>

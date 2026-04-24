@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>HPDBMS Dashboard</title>
+  </head>
+    <body>
+      <div class="topnav">
+    <div class="logo">HPDBMS</div>
+    
+    <div class="links">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('patients') }}">Patients</a>
+        <a href="{{ url_for('appointments') }}">Appointments</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="/">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+<h2>Patients</h2>
+
+<a href="{{ url_for('patients') }}">
+  <button>View Patients</button>
+</a>
+<a href="{{ url_for('add_patient_page') }}">
+  <button>Add New Patient</button>
+</a>
+
+</div>
+
+<div class="container">
+<h2>Appointments</h2>
+
+<a href="{{ url_for('appointments') }}">
+  <button>View Appointments</button>
+</a>
+<a href="{{ url_for('add_appointment_page') }}">
+  <button>Create New Appointment</button>
+</a>
+
+</div>
+
+<div class="container">
+<h2>Analytics</h2>
+
+<a href="{{ url_for('analytics') }}">
+  <button>View Analytics</button>
+</a>
+
+</div>
+
+    </body>
+</html>
